@@ -1,0 +1,19 @@
+
+
+# Cert and Key
+*.crt
+*.key
+
+# Script
+*.sh
+
+# test file
+*.db
+responsebody/*
+webpanel/*
+*.zip
+*.yaml
+
+# binary file
+catch
+
