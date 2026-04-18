@@ -17,16 +17,16 @@ jobs:
         with:
           node-version: 24
       - name: Install dependencies
-        working-directory: websrc/go-cache-webpanel/
+        working-directory: websrc/go-catch-webpanel/
         run: npm install
       - name: Build Vue project
-        working-directory: websrc/go-cache-webpanel/
+        working-directory: websrc/go-catch-webpanel/
         run: npm run build-only
       - name: Upload frontend dist
         uses: actions/upload-artifact@v4
         with:
           name: frontend-dist
-          path: websrc/go-cache-webpanel/dist/
+          path: websrc/go-catch-webpanel/dist/
 
   build-go:
     needs: build-frontend
@@ -52,7 +52,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-dist
-          path: websrc/go-cache-webpanel/dist/
+          path: websrc/go-catch-webpanel/dist/
       - uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
